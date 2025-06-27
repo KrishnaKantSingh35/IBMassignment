@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE company SYSTEM "exp5.dtd">
+<company>
+    <name>Tech Krishna Pvt Ltd</name>
+    <employees>
+        <employee>
+            <id>101</id>
+            <name>Krishna Sharma</name>
+            <department>IT</department>
+        </employee>
+        <employee>
+            <id>102</id>
+            <name>Ravi Kumar</name>
+            <department>HR</department>
+        </employee>
+        <employee>
+            <id>103</id>
+            <name>Sneha Singh</name>
+            <department>Finance</department>
+        </employee>
+    </employees>
+</company>

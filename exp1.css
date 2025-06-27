@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: blue;
+}
+
+/* Header */
+header {
+    background-color: skyblue;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: green;
+    text-decoration: none;
+}
+
+/* Section Styling */
+.section {
+    padding: 20px;
+    margin: 10px;
+    background-color: greenyellow;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Department Cards */
+.department {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: skyblue;
+    color: blueviolet;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

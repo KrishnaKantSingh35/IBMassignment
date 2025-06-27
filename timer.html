@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Inside a Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .timer-box {
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timer-box" id="timer">10</div> <!-- Initial Timer Value -->
+
+    <script>
+        let timeLeft = 10; // Set the initial time in seconds
+
+        function countdown() {
+            if (timeLeft > 0) {
+                timeLeft--; // Decrease the time by 1 second
+                document.getElementById('timer').innerText = timeLeft; // Update the timer display
+            } else {
+                clearInterval(timerInterval); // Stop the timer when it reaches 0
+                alert("Time's up!"); // Optional alert when the timer ends
+            }
+        }
+
+        // Start the timer and call the countdown function every 1 second (1000 milliseconds)
+        let timerInterval = setInterval(countdown, 1000);
+    </script>
+
+</body>
+</html>

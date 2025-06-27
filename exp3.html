@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exp3</title>
+    <link rel="stylesheet" href="exp3.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo"><img src="iit.jpg" height="40px" width="40px"></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Technical Krishna</h1>
+        <p>Learn with Fun.</p>
+        <a href="#services" class="btn">Let's get started</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>You get important information through our content. we share information by experiences.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Technical Skills Notes</h3>
+                <p>First get the information about what you want and what to do.</p>
+            </div>
+            <div class="card">
+                <h3>Practice</h3>
+                <p>Try with your creative mind, what you learn .</p>
+            </div>
+            <div class="card">
+                <h3>Online Tutorials</h3>
+                <p>we can try to clear your doubts through live interaction as well as recorded classes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <h2>Latest Blog Posts</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Real life examples</h3>
+                <p>examples that we experiences in our daily life routine helps you to easy understand and creative ideas.</p>
+            </div>
+            <div class="card">
+                <h3>Mathura Tour</h3>
+                <p>Travelling is also important for your growth to refresh mind.</p>
+            </div>
+            <div class="card">
+                <h3>Last 10 days</h3>
+                <p>here you get important or highlighted news that happens in last 10 days. it refresh on daily basis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: techkris@gmail.com</p>
+        <p>Phone: +91-9636000032</p>
+        <p>Address: sunshan gali , pareshan mohalla </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 techkris . All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Navbar Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

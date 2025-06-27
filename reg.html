@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+</head>
+<body bgcolor="skyblue">
+<div class="container">
+    <center>
+        <h2>Registration Form</h2>
+    </center>
+    <form action="script.php" method="POST" target="_blank">
+        <fieldset>
+            <legend>student details</legend>
+            <label for="sname">Student Name</label>
+            <input type="text" id="sname" name="studentname" placeholder="Full name.." required>
+            <br><br>
+            <label for="fname">Father's Name</label>
+            <input type="text" id="fname" name="fathername" placeholder="Full name.." required>
+            <br>
+            <br>
+            <label for="date">DOB</label>
+            <input type="date" id="dob" name="dob" placeholder="Student's Date of Birth.." required>
+            <br><br>
+            <label for="gender">Male</label>
+            <input type="radio" id="gender" name="gender" placeholder="Your gender.." required>
+            <label for="gender">Female</label>
+            <input type="radio" id="gender" name="gender" placeholder="Your gender.." required>
+            <label for="gender">Other</label>
+            <input type="radio" id="gender" name="gender" placeholder="your gender.." required>
+            <br><br>
+            <select name="Branch" id="branch" size="2">
+                <option value="it">IT1</option>
+                <option value="ee">EE1</option>
+                <option value="ce">CE1</option>
+                <option value="it">IT2</option>
+                <option value="ee">EE2</option>
+                <option value="ce">CE2</option>
+                <option value="it">IT3</option>
+                <option value="ee">EE3</option>
+                <option value="ce">CE3</option>
+                <option value="it">IT4</option>
+                <option value="ee">EE4</option>
+                <option value="ce">CE4</option>
+            </select>
+            <br><br>
+            <label for="date">date of registration</label>
+            <input type="date" id="dor" name="dor" placeholder="registration date.." required>
+            <br><br>
+            <label for="mob">MOB</label>
+            <input type="number" id="mob" name="mob" placeholder="Your contact no.." required>
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address.." required>
+            <br><br>
+            <textarea name="address" id="add" rows="5" cols="50" placeholder="Your permanent address.." required></textarea>
+            <br><br>
+            <input type="checkbox" id="valid" name="check" placeholder="all info are true" required>All above information are true
+            <br><br>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

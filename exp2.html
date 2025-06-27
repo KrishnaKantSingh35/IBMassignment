@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exp2</title>
+    <link rel="stylesheet" href="exp2.css">
+</head>
+<body>
+    <header>
+        <h1>Form</h1>
+        <p>Students / Faculty / Employee</p>
+    </header>
+
+    <section class="form-container">
+        <form action="#" method="POST" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter age" min="18" max="100" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="contact">Mob:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter contact number" pattern="[0-9]{10}" required>
+
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="">Select Role</option>
+                <option value="Student">Student</option>
+                <option value="Employee">Employee</option>
+                <option value="Faculty">Faculty</option>
+            </select>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" placeholder="Enter department name" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter address" rows="3" required></textarea>
+
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IITBijnor . All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const contact = document.getElementById('contact').value;
+            if (contact.length !== 10) {
+                alert('Contact number must be 10 digits.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

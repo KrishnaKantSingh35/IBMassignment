@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal System</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #22d6e3;
+        }
+        .traffic-light {
+            width: 100px;
+            background-color: #6019d9;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .light {
+            width: 80px;
+            height: 80px;
+            margin: 10px auto;
+            border-radius: 50%;
+            background-color: #111;
+            transition: background-color 0.3s ease;
+        }
+        .red {
+            background-color: #111;
+        }
+        .yellow {
+            background-color: #111;
+        }
+        .green {
+            background-color: #111;
+        }
+
+        .timer-box {
+            width: 200px;
+            height: 100px;
+            background-color: hsl(0, 85%, 51%);
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="traffic-light">
+        <div class="light red" id="red-light" ></div>
+        <div class="light yellow" id="yellow-light"></div>
+        <div class="light green" id="green-light"></div>
+    </div>
+
+    <script>
+        let currentLight = 0;
+        const lights = document.querySelectorAll('.light');
+
+        function changeLight() {
+            lights[currentLight].style.backgroundColor = '#111'; // Turn off current light
+            currentLight = (currentLight + 1) % lights.length; // Move to the next light
+            if (currentLight === 0) {
+                lights[currentLight].style.backgroundColor = 'red';
+            } else if (currentLight === 1) {
+                lights[currentLight].style.backgroundColor = 'yellow';
+            } else {
+                lights[currentLight].style.backgroundColor = 'green';
+            }
+        }
+
+        setInterval(changeLight, 5000);// Change light every 5 seconds
+        
+    </script>
+
+    <div class="timer-box" id="timer">5</div> <!-- Initial Timer Value -->
+
+    <script>
+        let timeLeft = 5; // Set the initial time in seconds
+        function countdown() {
+            if (timeLeft > 0) {
+                timeLeft--; // Decrease the time by 1 second
+                document.getElementById('timer').innerText = timeLeft; // Update the timer display
+            } else {
+                clearInterval(timerInterval); // Stop the timer when it reaches 0
+                alert("Time's up!"); // Optional alert when the timer ends
+            }
+                 } 
+
+        // Start the timer and call the countdown function every 1 second (1000 milliseconds)
+        let timerInterval = setInterval(countdown, 1000);
+    </script>
+
+</body>
+</html>
